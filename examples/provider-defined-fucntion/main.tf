@@ -10,7 +10,11 @@ terraform {
 provider "corefunc" {
 }
 
-output "test" {
+output "test_1" {
   value = provider::corefunc::str_snake("Hello world!")
+  # Prints: hello_world
+}
+output "test_2" {
+  value = provider::corefunc::str_camel("Hello world!")
   # Prints: hello_world
 }
